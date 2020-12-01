@@ -1,7 +1,8 @@
 <template>
   <div class="about">
+    <h1>Todo list with Reactive</h1>
     <form>
-      <label>Todo list with Reactive</label>
+      <label>new todo</label>
       <input name="newTodo" v-model="todo" />
       <button class="todo" @click.prevent="addTodo">Submit</button>
     </form>
