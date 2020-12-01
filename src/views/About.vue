@@ -7,6 +7,7 @@
       <button class="todo" @click.prevent="addTodo">Submit</button>
     </form>
     <button @click="resetTodo" class="todo">Reset</button>
+    <button @click="markAllTodo">all done</button>
     <ul>
       <li
         v-for="(todo, index) in todoList"
@@ -47,6 +48,11 @@ export default {
     const toggleDone = (todo) => {
       todo.done = !todo.done;
     };
+    const markAllTodo = () => {
+      data.todoList.forEach((todo) => {
+        todo.done = true;
+      });
+    };
 
     return {
       ...toRefs(data),
@@ -54,6 +60,7 @@ export default {
       resetTodo,
       deleteTodo,
       toggleDone,
+      markAllTodo,
     };
   },
 };

@@ -7,6 +7,7 @@
       <button>submit</button>
     </form>
     <button @click="deleteTodo">reset</button>
+    <button @click="markAllTodo">all done</button>
     <ul>
       <li
         v-for="(todo, index) in todoList"
@@ -53,6 +54,11 @@ export default {
       // Splice function syntax arr.splice(index, number, adding item, adding item, ...)
       todoList.value.splice(index, 1);
     };
+    const markAllTodo = () => {
+      todoList.value.forEach((todo) => {
+        todo.done = true;
+      });
+    };
     return {
       newTodo,
       todoList,
@@ -60,6 +66,7 @@ export default {
       toggleTodo,
       deleteTodo,
       removeTodo,
+      markAllTodo,
     };
   },
 };
