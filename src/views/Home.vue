@@ -44,11 +44,14 @@ export default {
       todo.done = !todo.done;
     }
     function deleteTodo() {
+      console.log("delete todo");
       todoList.value.length = 0;
     }
     // ES6 arrow function
     const removeTodo = (index) => {
-      todoList.value.splice(index);
+      console.log("remove todo");
+      // Splice function syntax arr.splice(index, number, adding item, adding item, ...)
+      todoList.value.splice(index, 1);
     };
     return {
       newTodo,
