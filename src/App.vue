@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">Ref of Vue</router-link> |
+    <router-link to="/about">Reactive of Vue</router-link>
   </div>
   <router-view/>
 </template>
